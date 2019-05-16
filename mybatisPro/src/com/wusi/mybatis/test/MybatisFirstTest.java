@@ -3,16 +3,21 @@ package com.wusi.mybatis.test;
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.List;
-
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
-
 import com.wusi.mybatis.pojo.User;
 
-
+/**
+ * 
+* @ClassName: MybatisFirstTest 
+* @Description: 入门简单代码
+* @author wuss
+* @date 2019年5月16日 下午7:55:03 
+*
+ */
 public class MybatisFirstTest {
 
 	@Test	
@@ -29,7 +34,7 @@ public class MybatisFirstTest {
 			//通过SqlSsession操作数据库
 			//第一个参数：映射文件中statement的id，等于namespace+"."+statement的id
 			User user = sqlSession.selectOne("UserMapper.findUserById",3);
-			
+
 			Field[] fields = user.getClass().getDeclaredFields();
 			for (Field field : fields) {
 				field.setAccessible(true);

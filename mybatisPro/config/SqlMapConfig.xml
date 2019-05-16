@@ -21,5 +21,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
     <!-- 加载映射文件 -->
     <mappers>
     	<mapper resource = "sqlmap/User.xml"/>
+    	<mapper resource = "mapper/UserMapper.xml"/>
     </mappers>
 </configuration>
