@@ -6,7 +6,7 @@ class News extends Component{
     constructor(props){
         super(props);
         this.state={
-            msg:'news'
+            msg:'这是news页面'
         }
     }
     render(){
