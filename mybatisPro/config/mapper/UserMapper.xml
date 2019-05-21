@@ -9,6 +9,10 @@
 		select * from User where userName like '%'||#{userName}||'%'
 	</select>
 	
+	<resultMap type="" id="">
+		<association property=""></association>
+	</resultMap>
+	
 	<insert id="insertUser" parameterType="com.wusi.mybatis.pojo.User">
 		<!-- 将插入数据的主键id返回 -->
 		<!-- 方法一
